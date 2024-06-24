@@ -1,10 +1,8 @@
-export default function getStudentsByLocation(obj, city) {
+export default function getStudentsByLocation(students, city) {
   console.log(students);
 
-  const ids = [];
-  for (const id of obj) {
-    // console.log(id)
-    if (id.location === city) ids.push(id);
+  if (students instanceof Array) {
+    return students.filter((s) => s.location === city);
   }
-  return ids;
+  return [];
 }
