@@ -1,5 +1,6 @@
-/* get student location */
 export default function getStudentsByLocation(obj, city) {
+  console.log(students);
+
   const ids = [];
   for (const id of obj) {
     // console.log(id)
