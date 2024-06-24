@@ -1,7 +1,7 @@
 module.exports = {
     env: {
       browser: false,
-      es6: true,
+      es2021: true,
       jest: true,
     },
     extends: [
@@ -13,7 +13,7 @@ module.exports = {
       SharedArrayBuffer: 'readonly',
     },
     parserOptions: {
-      ecmaVersion: 2018,
+      ecmaVersion: 2021,
       sourceType: 'module',
     },
     plugins: ['jest'],
@@ -28,10 +28,11 @@ module.exports = {
         'WithStatement',
       ],
     },
-    overrides:[
+    overrides: [
       {
         files: ['*.js'],
         excludedFiles: 'babel.config.js',
       }
-    ]
+    ],
   };
+  
