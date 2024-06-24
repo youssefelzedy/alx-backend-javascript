@@ -1,9 +1,6 @@
-/*get all ids*/
-export default function getListStudentIds(obj) {
-  const ids = [];
-  for (const id of obj) {
-    // console.log(id)
-    if (id.id !== undefined) ids.push(id.id);
+export default function getListStudentIds(students) {
+  if (students instanceof Array) {
+    return students.map((student) => student.id);
   }
-  return ids;
+  return [];
 }
